@@ -1,21 +1,17 @@
 package cl.duoc.todolist.repository;
 
 import cl.duoc.todolist.model.Tarea;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 @Repository
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Getter
 @Setter
+@Data
 public class TareaRepository {
 
     private List<Tarea> tareas;
