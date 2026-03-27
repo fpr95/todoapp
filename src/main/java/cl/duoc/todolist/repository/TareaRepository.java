@@ -4,17 +4,22 @@ import cl.duoc.todolist.model.Tarea;
 import lombok.*;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Repository
-@NoArgsConstructor
+//@NoArgsConstructor
 @Getter
 @Setter
 @Data
 public class TareaRepository {
 
     private List<Tarea> tareas;
+
+    public TareaRepository(){
+        this.tareas = new ArrayList<>();
+    }
 
     public void agregarTarea(Tarea t){
         tareas.add(t);
